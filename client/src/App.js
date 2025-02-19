@@ -22,26 +22,26 @@ axios.defaults.baseURL = 'https://wab-shop-production.up.railway.app';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-900 text-white">
-        <Toaster position="top-right" />
+      <div className="min-h-screen bg-gray-900 text-white pt-16">
         <Navbar />
-        <main className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/shop/id" element={<ShopID />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/admin/categories" element={<AdminCategories />} />
-            <Route path="/admin/claims" element={<AdminClaimManagement />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/shop/id" element={<ShopID />} />
             <Route path="/topup" element={<TopUp />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/deposit" element={<Deposit />} />
             <Route path="/claim" element={<Claim />} />
             <Route path="/claim/history" element={<ClaimHistory />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/admin/categories" element={<AdminCategories />} />
+            <Route path="/admin/claims" element={<AdminClaimManagement />} />
           </Routes>
-        </main>
+        </div>
+        <Toaster position="top-right" />
       </div>
     </Router>
   );
