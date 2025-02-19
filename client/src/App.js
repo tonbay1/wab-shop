@@ -15,6 +15,9 @@ import ClaimHistory from './pages/ClaimHistory';
 import AdminCategories from './pages/admin/Categories';
 import AdminClaimManagement from './pages/admin/ClaimManagement';
 import { Toaster } from 'react-hot-toast';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://wab-shop-production.up.railway.app';
 
 function App() {
   return (
